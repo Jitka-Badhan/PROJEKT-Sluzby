@@ -33,13 +33,12 @@ h2 {
     font-size: 16px;
 }
 
-
-/* Section intro */
-
-.intro__description,
-.services__text {
+.text-block {
     font-size: 16px;
 }
+
+
+/* Section intro */
 
 hr {
     margin: 0 auto;
@@ -54,7 +53,7 @@ hr {
 }
 
 .intro__description {
-    margin: 30px 0;
+    margin: 30px auto;
 }
 
 .button {
@@ -82,7 +81,7 @@ hr {
 /* Sections services */
 
 .services__text {
-    margin: 15px 0 30px;
+    margin: 15px auto 30px;
 }
 
 .card {
@@ -101,4 +100,54 @@ hr {
 
 .card__description {
     text-align: left;
+}
+
+
+/* Media queries */
+
+@media screen and (min-width: 640px) {
+    section:not(:last-of-type) {
+        margin-bottom: 80px;
+    }
+    
+    .container {
+        display: flex;
+    }
+    
+    .text-block {
+        margin-bottom: 40px;
+        width: 70vw;
+    }
+
+    .intro__img {
+        width: 55vw;
+    }
+
+    .intro__buttons {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .button, 
+    .button:not(:last-of-type) {
+        margin: 0;
+    }
+
+    .services__services {
+        gap: 20px;
+    }
+
+    .card {
+        margin: 0;
+        padding: 40px 10px;
+        display: block;
+    }
+
+    .card__description {
+        text-align: center;
+    }
+
+    .card__icon {
+        margin: 0 auto 20px;
+    }
 }
